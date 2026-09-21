@@ -1,0 +1,17 @@
+from_table,from_column,to_table,to_column,cardinality,cross_filter_direction,active
+fact_revenue,year_month,dim_date,year_month,Many to one,Single,Yes
+fact_revenue,country_code,dim_country,country_code,Many to one,Single,Yes
+fact_revenue,product_id,dim_product,product_id,Many to one,Single,Yes
+fact_revenue,customer_id,dim_customer,customer_id,Many to one,Single,Yes
+fact_forecast,year_month,dim_date,year_month,Many to one,Single,Yes
+fact_forecast,country_code,dim_country,country_code,Many to one,Single,Yes
+fact_forecast,product_id,dim_product,product_id,Many to one,Single,Yes
+fact_scenario,year_month,dim_date,year_month,Many to one,Single,Yes
+fact_scenario,country_code,dim_country,country_code,Many to one,Single,Yes
+fact_scenario,product_id,dim_product,product_id,Many to one,Single,Yes
+fact_scenario,scenario,dim_scenario,scenario,Many to one,Single,Yes
+fact_market_indicator,year_month,dim_date,year_month,Many to one,Single,Yes
+fact_market_indicator,country_code,dim_country,country_code,Many to one,Single,Yes
+fact_backtest,target_year_month,dim_date,year_month,Many to one,Single,Yes
+fact_backtest,country_code,dim_country,country_code,Many to one,Single,Yes
+fact_backtest,product_id,dim_product,product_id,Many to one,Single,Yes

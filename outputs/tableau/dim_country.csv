@@ -1,0 +1,14 @@
+country_code,country_name,region,population_m,gdp_per_capita_keur,mobile_penetration_base,market_maturity,price_level_index,demand_index,group_footprint
+DE,Germany,Western EU,84.4,48.9,1.33,Mature,1.06,1.0,True
+FR,France,Western EU,68.1,41.4,1.21,Mature,0.97,0.78,False
+NL,Netherlands,Western EU,17.9,55.9,1.25,Mature,1.02,0.44,True
+AT,Austria,Western EU,9.2,52.1,1.42,Mature,1.04,0.26,True
+PL,Poland,Central EU,36.7,20.4,1.38,Developing,0.82,0.52,True
+CZ,Czechia,Central EU,10.9,26.8,1.31,Mature,0.88,0.22,True
+SK,Slovakia,Central EU,5.4,21.9,1.35,Mature,0.86,0.13,True
+HU,Hungary,Central EU,9.6,18.4,1.19,Developing,0.81,0.15,True
+RO,Romania,Central EU,19.1,15.9,1.17,Developing,0.74,0.24,True
+HR,Croatia,Southern EU,3.9,18.1,1.09,Developing,0.79,0.09,True
+GR,Greece,Southern EU,10.4,20.9,1.16,Developing,0.83,0.17,True
+IT,Italy,Southern EU,58.8,34.8,1.49,Mature,0.91,0.71,False
+ES,Spain,Southern EU,48.3,29.6,1.24,Mature,0.89,0.63,False

@@ -1,0 +1,121 @@
+customer_id,customer_name,country_code,segment,contract_type,account_size_factor,relationship_start,churn_month,status,is_new_business,customer_tier
+CUS0001,Enterprise Aggregator HU-01,HU,Enterprise Aggregator,Framework Agreement,0.5852,2015-06,,Active,False,Small
+CUS0002,Hyperscaler & OTT CZ-01,CZ,Hyperscaler & OTT,Committed Volume,1.3149,2018-04,,Active,False,Mid
+CUS0003,Enterprise Aggregator NL-01,NL,Enterprise Aggregator,Framework Agreement,0.5412,2012-09,,Active,False,Small
+CUS0004,Tier-2 Carrier FR-01,FR,Tier-2 Carrier,Committed Volume,1.031,2013-08,,Active,False,Mid
+CUS0005,Messaging Aggregator DE-01,DE,Messaging Aggregator,Committed Volume,1.861,2013-10,2020-08,Churned,False,Mid
+CUS0006,Messaging Aggregator DE-02,DE,Messaging Aggregator,Spot / Pay-as-you-go,1.1065,2012-06,,Active,False,Mid
+CUS0007,Tier-2 Carrier FR-02,FR,Tier-2 Carrier,Framework Agreement,2.462,2014-11,,Active,False,Mid
+CUS0008,Messaging Aggregator AT-01,AT,Messaging Aggregator,Framework Agreement,2.3022,2011-09,,Active,False,Mid
+CUS0009,Tier-1 Carrier DE-03,DE,Tier-1 Carrier,Committed Volume,5.7832,2023-04,,Active,True,Key Account
+CUS0010,Messaging Aggregator ES-01,ES,Messaging Aggregator,Committed Volume,4.4103,2012-01,,Active,False,Key Account
+CUS0011,MVNO SK-01,SK,MVNO,Framework Agreement,1.1962,2015-11,,Active,False,Mid
+CUS0012,MVNO ES-02,ES,MVNO,Spot / Pay-as-you-go,2.0032,2011-02,2022-08,Churned,False,Mid
+CUS0013,MVNO FR-03,FR,MVNO,Framework Agreement,2.1654,2015-02,,Active,False,Mid
+CUS0014,Tier-2 Carrier PL-01,PL,Tier-2 Carrier,Committed Volume,0.7468,2011-02,,Active,False,Small
+CUS0015,MVNO PL-02,PL,MVNO,Committed Volume,1.4551,2017-05,,Active,False,Mid
+CUS0016,Tier-2 Carrier PL-03,PL,Tier-2 Carrier,Spot / Pay-as-you-go,0.3028,2011-06,,Active,False,Small
+CUS0017,Tier-2 Carrier RO-01,RO,Tier-2 Carrier,Framework Agreement,2.5074,2021-08,,Active,True,Mid
+CUS0018,Tier-1 Carrier HU-02,HU,Tier-1 Carrier,Spot / Pay-as-you-go,4.6643,2012-04,,Active,False,Key Account
+CUS0019,Tier-2 Carrier DE-04,DE,Tier-2 Carrier,Framework Agreement,1.1915,2011-06,,Active,False,Mid
+CUS0020,MVNO DE-05,DE,MVNO,Committed Volume,0.3914,2013-12,,Active,False,Small
+CUS0021,Enterprise Aggregator IT-01,IT,Enterprise Aggregator,Spot / Pay-as-you-go,0.4741,2023-08,,Active,True,Small
+CUS0022,Messaging Aggregator AT-02,AT,Messaging Aggregator,Framework Agreement,0.9812,2011-04,,Active,False,Small
+CUS0023,MVNO DE-06,DE,MVNO,Framework Agreement,0.8196,2020-04,,Active,True,Small
+CUS0024,Tier-1 Carrier FR-04,FR,Tier-1 Carrier,Committed Volume,3.4041,2018-06,2025-05,Churned,False,Key Account
+CUS0025,Tier-1 Carrier GR-01,GR,Tier-1 Carrier,Framework Agreement,3.9193,2018-01,,Active,False,Key Account
+CUS0026,Enterprise Aggregator FR-05,FR,Enterprise Aggregator,Framework Agreement,0.2295,2017-12,,Active,False,Small
+CUS0027,Tier-2 Carrier DE-07,DE,Tier-2 Carrier,Committed Volume,0.8872,2012-09,,Active,False,Small
+CUS0028,Tier-2 Carrier NL-02,NL,Tier-2 Carrier,Committed Volume,2.1534,2015-11,,Active,False,Mid
+CUS0029,MVNO ES-03,ES,MVNO,Committed Volume,0.1516,2022-05,,Active,True,Small
+CUS0030,Enterprise Aggregator ES-04,ES,Enterprise Aggregator,Spot / Pay-as-you-go,0.6795,2011-02,,Active,False,Small
+CUS0031,Enterprise Aggregator ES-05,ES,Enterprise Aggregator,Committed Volume,1.583,2012-08,,Active,False,Mid
+CUS0032,Messaging Aggregator NL-03,NL,Messaging Aggregator,Framework Agreement,4.6267,2017-09,,Active,False,Key Account
+CUS0033,Tier-2 Carrier SK-02,SK,Tier-2 Carrier,Committed Volume,1.9698,2018-02,,Active,False,Mid
+CUS0034,Hyperscaler & OTT FR-06,FR,Hyperscaler & OTT,Framework Agreement,3.0386,2016-01,2025-11,Churned,False,Key Account
+CUS0035,Tier-2 Carrier GR-02,GR,Tier-2 Carrier,Framework Agreement,2.2501,2015-01,2024-08,Churned,False,Mid
+CUS0036,Tier-1 Carrier FR-07,FR,Tier-1 Carrier,Spot / Pay-as-you-go,9.2346,2018-01,,Active,False,Key Account
+CUS0037,Hyperscaler & OTT IT-02,IT,Hyperscaler & OTT,Framework Agreement,3.6415,2014-07,,Active,False,Key Account
+CUS0038,Messaging Aggregator ES-06,ES,Messaging Aggregator,Committed Volume,4.3354,2014-02,,Active,False,Key Account
+CUS0039,Tier-2 Carrier NL-04,NL,Tier-2 Carrier,Committed Volume,0.8979,2017-12,,Active,False,Small
+CUS0040,Enterprise Aggregator NL-05,NL,Enterprise Aggregator,Spot / Pay-as-you-go,0.12,2013-08,,Active,False,Small
+CUS0041,Tier-2 Carrier PL-04,PL,Tier-2 Carrier,Framework Agreement,3.1932,2011-08,,Active,False,Key Account
+CUS0042,Tier-1 Carrier DE-08,DE,Tier-1 Carrier,Spot / Pay-as-you-go,6.7053,2012-03,,Active,False,Key Account
+CUS0043,MVNO HU-03,HU,MVNO,Committed Volume,2.5667,2018-07,,Active,False,Mid
+CUS0044,Tier-1 Carrier NL-06,NL,Tier-1 Carrier,Committed Volume,4.9109,2013-04,,Active,False,Key Account
+CUS0045,Tier-1 Carrier AT-03,AT,Tier-1 Carrier,Committed Volume,4.5006,2018-06,,Active,False,Key Account
+CUS0046,Messaging Aggregator GR-03,GR,Messaging Aggregator,Framework Agreement,3.2365,2011-04,,Active,False,Key Account
+CUS0047,Tier-2 Carrier DE-09,DE,Tier-2 Carrier,Framework Agreement,1.6778,2014-12,,Active,False,Mid
+CUS0048,Tier-2 Carrier FR-08,FR,Tier-2 Carrier,Committed Volume,3.4381,2015-02,,Active,False,Key Account
+CUS0049,Enterprise Aggregator DE-10,DE,Enterprise Aggregator,Spot / Pay-as-you-go,0.273,2011-09,,Active,False,Small
+CUS0050,Messaging Aggregator IT-03,IT,Messaging Aggregator,Framework Agreement,1.9409,2013-02,2023-02,Churned,False,Mid
+CUS0051,Tier-1 Carrier ES-07,ES,Tier-1 Carrier,Committed Volume,3.8481,2017-02,,Active,False,Key Account
+CUS0052,Messaging Aggregator DE-11,DE,Messaging Aggregator,Framework Agreement,1.4153,2020-07,,Active,True,Mid
+CUS0053,Tier-2 Carrier ES-08,ES,Tier-2 Carrier,Spot / Pay-as-you-go,1.1298,2014-03,,Active,False,Mid
+CUS0054,Tier-2 Carrier PL-05,PL,Tier-2 Carrier,Framework Agreement,4.2094,2015-07,,Active,False,Key Account
+CUS0055,MVNO HU-04,HU,MVNO,Framework Agreement,2.068,2016-05,,Active,False,Mid
+CUS0056,Tier-2 Carrier HU-05,HU,Tier-2 Carrier,Framework Agreement,1.4631,2012-11,,Active,False,Mid
+CUS0057,Tier-2 Carrier DE-12,DE,Tier-2 Carrier,Framework Agreement,2.5973,2016-10,,Active,False,Mid
+CUS0058,MVNO FR-09,FR,MVNO,Spot / Pay-as-you-go,0.665,2017-06,,Active,False,Small
+CUS0059,Hyperscaler & OTT IT-04,IT,Hyperscaler & OTT,Committed Volume,2.318,2017-07,,Active,False,Mid
+CUS0060,Tier-1 Carrier ES-09,ES,Tier-1 Carrier,Committed Volume,4.0115,2016-08,,Active,False,Key Account
+CUS0061,MVNO NL-07,NL,MVNO,Committed Volume,2.0135,2018-04,,Active,False,Mid
+CUS0062,MVNO RO-02,RO,MVNO,Spot / Pay-as-you-go,1.3114,2014-10,2023-05,Churned,False,Mid
+CUS0063,Tier-2 Carrier ES-10,ES,Tier-2 Carrier,Framework Agreement,1.5333,2016-10,,Active,False,Mid
+CUS0064,Hyperscaler & OTT DE-13,DE,Hyperscaler & OTT,Committed Volume,7.0534,2015-03,,Active,False,Key Account
+CUS0065,Tier-2 Carrier DE-14,DE,Tier-2 Carrier,Committed Volume,1.9584,2013-03,,Active,False,Mid
+CUS0066,Enterprise Aggregator FR-10,FR,Enterprise Aggregator,Spot / Pay-as-you-go,1.461,2014-02,,Active,False,Mid
+CUS0067,Tier-2 Carrier IT-05,IT,Tier-2 Carrier,Committed Volume,1.609,2015-01,,Active,False,Mid
+CUS0068,Tier-2 Carrier DE-15,DE,Tier-2 Carrier,Committed Volume,5.0221,2013-08,2024-01,Churned,False,Key Account
+CUS0069,Tier-2 Carrier CZ-02,CZ,Tier-2 Carrier,Committed Volume,0.3559,2011-04,2025-04,Churned,False,Small
+CUS0070,Messaging Aggregator SK-03,SK,Messaging Aggregator,Framework Agreement,3.3876,2017-01,,Active,False,Key Account
+CUS0071,Enterprise Aggregator HR-01,HR,Enterprise Aggregator,Framework Agreement,1.0005,2012-01,,Active,False,Mid
+CUS0072,Tier-2 Carrier PL-06,PL,Tier-2 Carrier,Framework Agreement,1.3101,2011-08,,Active,False,Mid
+CUS0073,Tier-2 Carrier ES-11,ES,Tier-2 Carrier,Committed Volume,2.4537,2024-06,,Active,True,Mid
+CUS0074,Enterprise Aggregator ES-12,ES,Enterprise Aggregator,Committed Volume,1.1846,2014-09,,Active,False,Mid
+CUS0075,Messaging Aggregator NL-08,NL,Messaging Aggregator,Spot / Pay-as-you-go,0.3081,2013-01,,Active,False,Small
+CUS0076,Tier-2 Carrier ES-13,ES,Tier-2 Carrier,Spot / Pay-as-you-go,2.1254,2020-03,,Active,True,Mid
+CUS0077,Hyperscaler & OTT ES-14,ES,Hyperscaler & OTT,Framework Agreement,7.8306,2011-02,,Active,False,Key Account
+CUS0078,Tier-2 Carrier FR-11,FR,Tier-2 Carrier,Committed Volume,2.6016,2011-12,,Active,False,Mid
+CUS0079,Hyperscaler & OTT DE-16,DE,Hyperscaler & OTT,Committed Volume,2.5882,2017-07,,Active,False,Mid
+CUS0080,Hyperscaler & OTT HU-06,HU,Hyperscaler & OTT,Spot / Pay-as-you-go,4.0324,2021-10,,Active,True,Key Account
+CUS0081,Tier-2 Carrier AT-04,AT,Tier-2 Carrier,Spot / Pay-as-you-go,0.546,2015-10,,Active,False,Small
+CUS0082,MVNO SK-04,SK,MVNO,Committed Volume,1.0504,2021-06,,Active,True,Mid
+CUS0083,Tier-2 Carrier RO-03,RO,Tier-2 Carrier,Framework Agreement,2.5205,2017-04,,Active,False,Mid
+CUS0084,Tier-2 Carrier SK-05,SK,Tier-2 Carrier,Committed Volume,2.1957,2016-05,2022-03,Churned,False,Mid
+CUS0085,MVNO CZ-03,CZ,MVNO,Committed Volume,0.5098,2015-01,,Active,False,Small
+CUS0086,Tier-2 Carrier IT-06,IT,Tier-2 Carrier,Framework Agreement,0.7234,2017-09,,Active,False,Small
+CUS0087,Tier-1 Carrier NL-09,NL,Tier-1 Carrier,Framework Agreement,6.9531,2013-02,,Active,False,Key Account
+CUS0088,Enterprise Aggregator ES-15,ES,Enterprise Aggregator,Spot / Pay-as-you-go,1.5662,2012-06,,Active,False,Mid
+CUS0089,Tier-2 Carrier RO-04,RO,Tier-2 Carrier,Framework Agreement,1.3409,2015-11,,Active,False,Mid
+CUS0090,Enterprise Aggregator DE-17,DE,Enterprise Aggregator,Framework Agreement,1.1056,2016-03,,Active,False,Mid
+CUS0091,Hyperscaler & OTT ES-16,ES,Hyperscaler & OTT,Framework Agreement,3.1132,2021-09,,Active,True,Key Account
+CUS0092,Messaging Aggregator HU-07,HU,Messaging Aggregator,Spot / Pay-as-you-go,1.5397,2013-02,,Active,False,Mid
+CUS0093,Enterprise Aggregator PL-07,PL,Enterprise Aggregator,Framework Agreement,0.391,2012-07,,Active,False,Small
+CUS0094,MVNO IT-07,IT,MVNO,Framework Agreement,1.7284,2021-05,,Active,True,Mid
+CUS0095,MVNO HU-08,HU,MVNO,Committed Volume,0.5183,2011-12,,Active,False,Small
+CUS0096,Messaging Aggregator NL-10,NL,Messaging Aggregator,Committed Volume,0.5058,2020-07,,Active,True,Small
+CUS0097,Hyperscaler & OTT DE-18,DE,Hyperscaler & OTT,Spot / Pay-as-you-go,3.7084,2013-08,,Active,False,Key Account
+CUS0098,Tier-2 Carrier ES-17,ES,Tier-2 Carrier,Committed Volume,2.5344,2013-09,,Active,False,Mid
+CUS0099,Tier-2 Carrier ES-18,ES,Tier-2 Carrier,Committed Volume,0.9798,2011-04,,Active,False,Small
+CUS0100,Messaging Aggregator FR-12,FR,Messaging Aggregator,Framework Agreement,3.1761,2011-02,,Active,False,Key Account
+CUS0101,Enterprise Aggregator FR-13,FR,Enterprise Aggregator,Framework Agreement,0.569,2012-02,,Active,False,Small
+CUS0102,Messaging Aggregator IT-08,IT,Messaging Aggregator,Committed Volume,0.4354,2013-05,,Active,False,Small
+CUS0103,Messaging Aggregator PL-08,PL,Messaging Aggregator,Committed Volume,2.4622,2022-10,,Active,True,Mid
+CUS0104,Enterprise Aggregator AT-05,AT,Enterprise Aggregator,Framework Agreement,1.6791,2012-02,2021-07,Churned,False,Mid
+CUS0105,Messaging Aggregator IT-09,IT,Messaging Aggregator,Framework Agreement,1.4379,2022-07,,Active,True,Mid
+CUS0106,Tier-2 Carrier FR-14,FR,Tier-2 Carrier,Framework Agreement,2.3491,2014-06,,Active,False,Mid
+CUS0107,MVNO DE-19,DE,MVNO,Committed Volume,1.0268,2016-10,,Active,False,Mid
+CUS0108,Enterprise Aggregator HU-09,HU,Enterprise Aggregator,Framework Agreement,0.6809,2021-09,,Active,True,Small
+CUS0109,Tier-2 Carrier GR-04,GR,Tier-2 Carrier,Committed Volume,1.7378,2014-02,,Active,False,Mid
+CUS0110,Tier-2 Carrier GR-05,GR,Tier-2 Carrier,Framework Agreement,2.5664,2019-07,,Active,True,Mid
+CUS0111,Hyperscaler & OTT PL-09,PL,Hyperscaler & OTT,Committed Volume,1.4462,2020-06,,Active,True,Mid
+CUS0112,Hyperscaler & OTT IT-10,IT,Hyperscaler & OTT,Spot / Pay-as-you-go,8.6685,2018-07,,Active,False,Key Account
+CUS0113,Hyperscaler & OTT DE-20,DE,Hyperscaler & OTT,Committed Volume,2.4605,2017-03,,Active,False,Mid
+CUS0114,MVNO HU-10,HU,MVNO,Framework Agreement,1.6735,2013-06,,Active,False,Mid
+CUS0115,Messaging Aggregator ES-19,ES,Messaging Aggregator,Committed Volume,0.8111,2013-10,,Active,False,Small
+CUS0116,Hyperscaler & OTT PL-10,PL,Hyperscaler & OTT,Committed Volume,5.933,2014-12,,Active,False,Key Account
+CUS0117,Enterprise Aggregator FR-15,FR,Enterprise Aggregator,Framework Agreement,2.5139,2013-11,,Active,False,Mid
+CUS0118,Tier-1 Carrier CZ-04,CZ,Tier-1 Carrier,Framework Agreement,6.535,2015-04,,Active,False,Key Account
+CUS0119,Messaging Aggregator ES-20,ES,Messaging Aggregator,Framework Agreement,0.12,2014-02,,Active,False,Small
+CUS0120,Enterprise Aggregator FR-16,FR,Enterprise Aggregator,Committed Volume,0.4765,2016-09,,Active,False,Small

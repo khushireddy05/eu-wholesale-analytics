@@ -1,0 +1,109 @@
+fact_id,category,statement,value,unit,source
+F001,Group performance,"Revenue, last 12 months",2446.64126678,EUR m,mart_market
+F002,Group performance,"Revenue, prior 12 months",2174.32235318,EUR m,mart_market
+F003,Group performance,Revenue growth year on year,12.524311917307362,%,mart_market
+F004,Group performance,"Gross margin, last 12 months",690.6105781200001,EUR m,mart_market
+F005,Group performance,"Gross margin percentage, last 12 months",28.226883421651173,%,mart_market
+F006,Group performance,Gross margin percentage change year on year,0.33962060603484057,pp,mart_market
+F007,Group performance,Revenue CAGR across the observed window,8.381260869498309,%,mart_market
+F008,Product performance,"A2P Messaging revenue, last 12 months",781.0021118,EUR m,mart_market
+F009,Product performance,A2P Messaging revenue growth year on year,21.290349707047543,%,mart_market
+F010,Product performance,A2P Messaging share of group revenue,31.92139862938996,%,mart_market
+F011,Product performance,"IPX Roaming & Signalling revenue, last 12 months",529.24928729,EUR m,mart_market
+F012,Product performance,IPX Roaming & Signalling revenue growth year on year,13.793852325267842,%,mart_market
+F013,Product performance,IPX Roaming & Signalling share of group revenue,21.631666827337533,%,mart_market
+F014,Product performance,"Ethernet & Capacity Services revenue, last 12 months",424.76303433,EUR m,mart_market
+F015,Product performance,Ethernet & Capacity Services revenue growth year on year,2.1912807241591894,%,mart_market
+F016,Product performance,Ethernet & Capacity Services share of group revenue,17.361067194334804,%,mart_market
+F017,Product performance,"IP Transit revenue, last 12 months",196.98357398,EUR m,mart_market
+F018,Product performance,IP Transit revenue growth year on year,17.45293798545815,%,mart_market
+F019,Product performance,IP Transit share of group revenue,8.051183336707474,%,mart_market
+F020,Product performance,"Cloud Connect revenue, last 12 months",189.14947562,EUR m,mart_market
+F021,Product performance,Cloud Connect revenue growth year on year,22.592399479376436,%,mart_market
+F022,Product performance,Cloud Connect share of group revenue,7.7309852567367905,%,mart_market
+F023,Product performance,"Voice Firewall & Anti-Fraud revenue, last 12 months",188.81375844,EUR m,mart_market
+F024,Product performance,Voice Firewall & Anti-Fraud revenue growth year on year,16.641044459949402,%,mart_market
+F025,Product performance,Voice Firewall & Anti-Fraud share of group revenue,7.7172637036608105,%,mart_market
+F026,Product performance,"International Voice Termination revenue, last 12 months",136.68002532,EUR m,mart_market
+F027,Product performance,International Voice Termination revenue growth year on year,-17.554102084361954,%,mart_market
+F028,Product performance,International Voice Termination share of group revenue,5.586435051832638,%,mart_market
+F029,Revenue bridge,Total volume effect on revenue year on year,439.7010255704031,EUR m,price_volume_bridge
+F030,Revenue bridge,Total price effect on revenue year on year,-129.28534799518943,EUR m,price_volume_bridge
+F031,Revenue bridge,Total joint volume-price effect year on year,-38.09676397521369,EUR m,price_volume_bridge
+F032,Revenue bridge,International Voice Termination volume effect,-19.970817200662555,EUR m,price_volume_bridge
+F033,Revenue bridge,International Voice Termination price effect,-10.38120037853154,EUR m,price_volume_bridge
+F034,Revenue bridge,Ethernet & Capacity Services volume effect,45.11767584781042,EUR m,price_volume_bridge
+F035,Revenue bridge,Ethernet & Capacity Services price effect,-32.48355109294222,EUR m,price_volume_bridge
+F036,Revenue bridge,Voice Firewall & Anti-Fraud volume effect,32.48504886355809,EUR m,price_volume_bridge
+F037,Revenue bridge,Voice Firewall & Anti-Fraud price effect,-4.620058468916609,EUR m,price_volume_bridge
+F038,Revenue bridge,IP Transit volume effect,83.14799769676931,EUR m,price_volume_bridge
+F039,Revenue bridge,IP Transit price effect,-36.01955460262565,EUR m,price_volume_bridge
+F040,Revenue bridge,Cloud Connect volume effect,54.34865665039512,EUR m,price_volume_bridge
+F041,Revenue bridge,Cloud Connect price effect,-14.413445262630635,EUR m,price_volume_bridge
+F042,Revenue bridge,IPX Roaming & Signalling volume effect,135.11624804175273,EUR m,price_volume_bridge
+F043,Revenue bridge,IPX Roaming & Signalling price effect,-54.987233132953484,EUR m,price_volume_bridge
+F044,Revenue bridge,A2P Messaging volume effect,109.45621567077994,EUR m,price_volume_bridge
+F045,Revenue bridge,A2P Messaging price effect,23.619694943410735,EUR m,price_volume_bridge
+F046,Market performance,"France revenue, last 12 months",485.2375869,EUR m,mart_market
+F047,Market performance,France revenue growth year on year,10.214029966305272,%,mart_market
+F048,Market performance,"Germany revenue, last 12 months",457.32542391000004,EUR m,mart_market
+F049,Market performance,Germany revenue growth year on year,10.989730071124962,%,mart_market
+F050,Market performance,"Spain revenue, last 12 months",394.92311011000004,EUR m,mart_market
+F051,Market performance,Spain revenue growth year on year,15.686113300820509,%,mart_market
+F052,Market performance,"Netherlands revenue, last 12 months",277.92909875,EUR m,mart_market
+F053,Market performance,Netherlands revenue growth year on year,10.127215245122915,%,mart_market
+F054,Market performance,"Poland revenue, last 12 months",213.15342075,EUR m,mart_market
+F055,Market performance,Poland revenue growth year on year,23.95023960640979,%,mart_market
+F056,Market performance,"Italy revenue, last 12 months",193.34878713,EUR m,mart_market
+F057,Market performance,Italy revenue growth year on year,11.580971688930411,%,mart_market
+F058,Market performance,Largest absolute market gain: Spain,53.54842058000004,EUR m,mart_market
+F059,Market performance,Largest absolute market decline: Czechia,-0.04381078999999911,EUR m,mart_market
+F060,Portfolio structure,Active accounts in the last 12 months,111.0,count,mart_customer
+F061,Portfolio structure,Share of revenue from the ten largest accounts,31.019238714910557,%,mart_customer
+F062,Portfolio structure,Customer Herfindahl-Hirschman index,180.63190162897263,index,mart_customer
+F063,Portfolio structure,Net revenue retention,112.5243119173073,%,mart_customer
+F064,Portfolio structure,Accounts that churned during the window,11.0,count,dim_customer
+F065,Account movements,"Largest growing account Messaging Aggregator PL-08 (PL, Messaging Aggregator) revenue change year on year",30.846596330000004,EUR m,mart_customer
+F066,Account movements,"Largest growing account Messaging Aggregator ES-01 (ES, Messaging Aggregator) revenue change year on year",17.049456329999998,EUR m,mart_customer
+F067,Account movements,"Largest growing account Messaging Aggregator NL-03 (NL, Messaging Aggregator) revenue change year on year",13.372380019999996,EUR m,mart_customer
+F068,Account movements,"Largest declining account Tier-1 Carrier FR-04 (FR, Tier-1 Carrier) revenue change year on year",-5.90188395,EUR m,mart_customer
+F069,Account movements,"Largest declining account Hyperscaler & OTT FR-06 (FR, Hyperscaler & OTT) revenue change year on year",-3.614637370000001,EUR m,mart_customer
+F070,Account movements,"Largest declining account Tier-2 Carrier CZ-02 (CZ, Tier-2 Carrier) revenue change year on year",-1.0825300800000002,EUR m,mart_customer
+F071,Market indicators,"International travel index, EU average, latest month",127.57899230769227,index,fact_market_indicator
+F072,Market indicators,International travel index change year on year,3.555799342898047,%,fact_market_indicator
+F073,Market indicators,"Data traffic index, EU average, latest month",686.7131153846154,index,fact_market_indicator
+F074,Market indicators,Data traffic index change year on year,28.08124371655858,%,fact_market_indicator
+F075,Market indicators,"OTT substitution index, EU average, latest month",189.4504076923077,index,fact_market_indicator
+F076,Market indicators,OTT substitution index change year on year,9.543435011596157,%,fact_market_indicator
+F077,Market indicators,"E-commerce activity index, EU average, latest month",236.03615384615387,index,fact_market_indicator
+F078,Market indicators,E-commerce activity index change year on year,10.164306724411043,%,fact_market_indicator
+F079,Market indicators,"Consumer price inflation, EU average, latest month",2.2130538461538465,%,fact_market_indicator
+F080,Forecast,"Forecast revenue, next 12 months",2632.6032506634806,EUR m,fact_forecast
+F081,Forecast,Forecast revenue growth versus the last 12 months,7.600704950432857,%,fact_forecast
+F082,Forecast,Champion model backtest WAPE,11.341377354104038,%,accuracy_by_model
+F083,Forecast,Seasonal-naive benchmark backtest WAPE,14.341530604203603,%,accuracy_by_model
+F084,Forecast,Champion accuracy improvement over the benchmark,20.919337920739082,%,accuracy_by_model
+F085,Forecast,Backtest WAPE at a 1-month horizon,6.911280094921198,%,accuracy_by_horizon
+F086,Forecast,Backtest WAPE at a 12-month horizon,12.6855356783302,%,accuracy_by_horizon
+F087,Forecast,"International Voice Termination forecast revenue, next 12 months",109.10185029532677,EUR m,fact_forecast
+F088,Forecast,International Voice Termination forecast growth versus the last 12 months,-20.177180213499557,%,fact_forecast
+F089,Forecast,"A2P Messaging forecast revenue, next 12 months",860.0777502336193,EUR m,fact_forecast
+F090,Forecast,A2P Messaging forecast growth versus the last 12 months,10.124894317042399,%,fact_forecast
+F091,Forecast,"IPX Roaming & Signalling forecast revenue, next 12 months",578.4880089070135,EUR m,fact_forecast
+F092,Forecast,IPX Roaming & Signalling forecast growth versus the last 12 months,9.303502678130826,%,fact_forecast
+F093,Forecast,"IP Transit forecast revenue, next 12 months",216.4587783383541,EUR m,fact_forecast
+F094,Forecast,IP Transit forecast growth versus the last 12 months,9.88671489955375,%,fact_forecast
+F095,Forecast,"Ethernet & Capacity Services forecast revenue, next 12 months",441.8457443017197,EUR m,fact_forecast
+F096,Forecast,Ethernet & Capacity Services forecast growth versus the last 12 months,4.0217035361057585,%,fact_forecast
+F097,Forecast,"Cloud Connect forecast revenue, next 12 months",210.62777373244944,EUR m,fact_forecast
+F098,Forecast,Cloud Connect forecast growth versus the last 12 months,11.355198338270412,%,fact_forecast
+F099,Forecast,"Voice Firewall & Anti-Fraud forecast revenue, next 12 months",216.00334485499755,EUR m,fact_forecast
+F100,Forecast,Voice Firewall & Anti-Fraud forecast growth versus the last 12 months,14.40021460281331,%,fact_forecast
+F101,Scenarios,"Downside scenario revenue, next 12 months",2481.6184579561173,EUR m,fact_scenario
+F102,Scenarios,Downside scenario growth versus the last 12 months,1.4296003117020122,%,fact_scenario
+F103,Scenarios,"Baseline scenario revenue, next 12 months",2632.60325066348,EUR m,fact_scenario
+F104,Scenarios,Baseline scenario growth versus the last 12 months,7.600704950432833,%,fact_scenario
+F105,Scenarios,"Upside scenario revenue, next 12 months",2790.8991866315237,EUR m,fact_scenario
+F106,Scenarios,Upside scenario growth versus the last 12 months,14.07063326061682,%,fact_scenario
+F107,Scenarios,Planning range between the upside and downside scenarios,309.28072867540646,EUR m,fact_scenario
+F108,Scenarios,Planning range as a share of the baseline,11.748094916978475,%,fact_scenario

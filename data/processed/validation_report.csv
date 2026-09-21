@@ -1,0 +1,17 @@
+check,severity,status,detail
+fact.keys_not_null,ERROR,PASS,0 null key values
+fact.grain_unique,ERROR,PASS,0 duplicate rows at month x customer x product
+fact.fk_dim_date,ERROR,PASS,0 rows with no dim_date match
+fact.fk_dim_country,ERROR,PASS,0 rows with no dim_country match
+fact.fk_dim_product,ERROR,PASS,0 rows with no dim_product match
+fact.fk_dim_customer,ERROR,PASS,0 rows with no dim_customer match
+fact.revenue_positive,ERROR,PASS,0 non-positive revenue rows
+fact.volume_positive,ERROR,PASS,0 non-positive volume rows
+fact.price_positive,ERROR,PASS,0 non-positive unit prices
+fact.margin_pct_in_range,ERROR,PASS,0 rows with implausible gross margin
+fact.revenue_equals_volume_x_price,WARNING,PASS,max relative deviation 0.0066%
+fact.margin_identity,ERROR,PASS,max absolute deviation EUR 0.0100
+calendar.full_coverage,ERROR,PASS,"90 distinct fact months, all present in dim_date (102 months total)"
+indicators.complete_panel,ERROR,PASS,"1170 rows, expected 1170 (13 markets x 90 history months)"
+indicators.no_nulls,ERROR,PASS,0 null values
+customers.all_transacting,WARNING,PASS,120 of 120 customers have traffic

@@ -1,0 +1,229 @@
+// ===========================================================================
+// EU Wholesale Market Analytics - DAX measure library
+// ---------------------------------------------------------------------------
+// Paste into Power BI Desktop (Home > New measure), or use Tabular Editor to
+// import the whole file. Measures are grouped by display folder.
+//
+// Model assumptions (see model_relationships.csv):
+//   dim_date[year_month]      1 -> * fact_revenue[year_month]
+//   dim_country[country_code] 1 -> * fact_revenue[country_code]
+//   dim_product[product_id]   1 -> * fact_revenue[product_id]
+//   dim_customer[customer_id] 1 -> * fact_revenue[customer_id]
+//   dim_date / dim_country / dim_product also feed fact_forecast and
+//   fact_scenario; dim_scenario[scenario] 1 -> * fact_scenario[scenario].
+//   dim_date must be marked as the model date table on dim_date[date].
+// ===========================================================================
+
+
+// --- Folder: 01 Core --------------------------------------------------------
+
+Revenue =
+SUM ( fact_revenue[revenue_eur] )
+
+Cost =
+SUM ( fact_revenue[cost_eur] )
+
+Gross Margin =
+SUM ( fact_revenue[margin_eur] )
+
+Gross Margin % =
+DIVIDE ( [Gross Margin], [Revenue] )
+
+Traffic Volume =
+SUM ( fact_revenue[volume_units] )
+
+// Realised price must be recomputed from the aggregates - averaging the
+// row-level price would weight every row equally regardless of size.
+Realised Unit Price =
+DIVIDE ( [Revenue], [Traffic Volume] )
+
+Active Customers =
+DISTINCTCOUNT ( fact_revenue[customer_id] )
+
+Revenue per Customer =
+DIVIDE ( [Revenue], [Active Customers] )
+
+
+// --- Folder: 02 Time intelligence -------------------------------------------
+
+Revenue LY =
+CALCULATE ( [Revenue], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+
+Revenue YoY =
+VAR Current = [Revenue]
+VAR Prior = [Revenue LY]
+RETURN
+    IF ( NOT ISBLANK ( Prior ), Current - Prior )
+
+Revenue YoY % =
+DIVIDE ( [Revenue YoY], [Revenue LY] )
+
+Revenue YTD =
+TOTALYTD ( [Revenue], dim_date[date] )
+
+Revenue R12M =
+CALCULATE (
+    [Revenue],
+    DATESINPERIOD ( dim_date[date], MAX ( dim_date[date] ), -12, MONTH )
+)
+
+Revenue R12M LY =
+CALCULATE (
+    [Revenue],
+    DATESINPERIOD ( dim_date[date], EDATE ( MAX ( dim_date[date] ), -12 ), -12, MONTH )
+)
+
+Revenue R12M Growth % =
+DIVIDE ( [Revenue R12M] - [Revenue R12M LY], [Revenue R12M LY] )
+
+Gross Margin % LY =
+CALCULATE ( [Gross Margin %], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+
+Gross Margin pp Change =
+( [Gross Margin %] - [Gross Margin % LY] ) * 100
+
+
+// --- Folder: 03 Mix and concentration ---------------------------------------
+
+// Share of the currently visible total, ignoring the filter on the dimension
+// being ranked but respecting date and any other slicers.
+Revenue Share of Market % =
+DIVIDE ( [Revenue], CALCULATE ( [Revenue], ALLSELECTED ( dim_country ) ) )
+
+Revenue Share of Portfolio % =
+DIVIDE ( [Revenue], CALCULATE ( [Revenue], ALLSELECTED ( dim_product ) ) )
+
+Top 10 Customer Revenue =
+VAR TopCustomers =
+    TOPN ( 10, ALLSELECTED ( dim_customer[customer_id] ), [Revenue], DESC )
+RETURN
+    CALCULATE ( [Revenue], KEEPFILTERS ( TopCustomers ) )
+
+Top 10 Customer Share % =
+DIVIDE ( [Top 10 Customer Revenue], CALCULATE ( [Revenue], ALLSELECTED ( dim_customer ) ) )
+
+// Herfindahl-Hirschman index of customer concentration, 0-10,000.
+Customer HHI =
+VAR Total = CALCULATE ( [Revenue], ALLSELECTED ( dim_customer ) )
+RETURN
+    SUMX (
+        VALUES ( dim_customer[customer_id] ),
+        VAR Share = DIVIDE ( [Revenue], Total )
+        RETURN Share * Share * 10000
+    )
+
+// Revenue this period from customers that were active a year ago.
+Net Revenue Retention % =
+VAR PriorCohort =
+    CALCULATETABLE (
+        VALUES ( fact_revenue[customer_id] ),
+        DATESINPERIOD ( dim_date[date], EDATE ( MAX ( dim_date[date] ), -12 ), -12, MONTH )
+    )
+VAR PriorRevenue = [Revenue R12M LY]
+VAR CurrentFromCohort =
+    CALCULATE ( [Revenue R12M], KEEPFILTERS ( PriorCohort ) )
+RETURN
+    DIVIDE ( CurrentFromCohort, PriorRevenue )
+
+
+// --- Folder: 04 Forecast ----------------------------------------------------
+
+Forecast Revenue =
+SUM ( fact_forecast[forecast_eur] )
+
+Forecast Lower =
+SUM ( fact_forecast[forecast_lo_eur] )
+
+Forecast Upper =
+SUM ( fact_forecast[forecast_hi_eur] )
+
+// One continuous line for a chart that spans history and projection.
+Revenue and Forecast =
+COALESCE ( [Revenue], [Forecast Revenue] )
+
+Forecast vs Last 12 Months % =
+DIVIDE (
+    CALCULATE ( [Forecast Revenue], ALL ( dim_date ) ),
+    CALCULATE (
+        [Revenue],
+        DATESINPERIOD (
+            dim_date[date],
+            CALCULATE ( MAX ( fact_revenue[year_month] ), ALL ( dim_date ) ),
+            -12,
+            MONTH
+        )
+    )
+) - 1
+
+Forecast Interval Width % =
+DIVIDE ( [Forecast Upper] - [Forecast Lower], [Forecast Revenue] )
+
+
+// --- Folder: 05 Scenarios ---------------------------------------------------
+
+Scenario Revenue =
+SUM ( fact_scenario[forecast_eur] )
+
+Baseline Revenue =
+CALCULATE ( [Scenario Revenue], dim_scenario[scenario] = "Baseline" )
+
+Scenario vs Baseline =
+[Scenario Revenue] - [Baseline Revenue]
+
+Scenario vs Baseline % =
+DIVIDE ( [Scenario vs Baseline], [Baseline Revenue] )
+
+// Upside minus downside: the planning range the business should hold.
+Scenario Planning Range =
+CALCULATE ( [Scenario Revenue], dim_scenario[scenario] = "Upside" )
+    - CALCULATE ( [Scenario Revenue], dim_scenario[scenario] = "Downside" )
+
+
+// --- Folder: 06 Forecast accuracy -------------------------------------------
+
+// WAPE is a ratio of sums, so it must be aggregated from its components
+// rather than averaged across rows.
+Backtest Absolute Error =
+SUM ( fact_backtest[abs_error] )
+
+Backtest Actual =
+SUM ( fact_backtest[y] )
+
+WAPE % =
+DIVIDE ( [Backtest Absolute Error], [Backtest Actual] )
+
+Forecast Bias % =
+DIVIDE (
+    SUMX ( fact_backtest, fact_backtest[y_pred] - fact_backtest[y] ),
+    [Backtest Actual]
+)
+
+Benchmark WAPE % =
+CALCULATE ( [WAPE %], fact_backtest[model] = "seasonal_naive" )
+
+Accuracy Gain vs Benchmark % =
+DIVIDE ( [Benchmark WAPE %] - [WAPE %], [Benchmark WAPE %] )
+
+
+// --- Folder: 07 Formatting helpers ------------------------------------------
+
+Revenue (EUR m) =
+DIVIDE ( [Revenue], 1000000 )
+
+Forecast Revenue (EUR m) =
+DIVIDE ( [Forecast Revenue], 1000000 )
+
+// Colour driver for conditional formatting on growth visuals.
+Growth Colour =
+IF ( [Revenue YoY %] >= 0, "#1F7A4D", "#B4232C" )
+
+KPI Trend Label =
+VAR Growth = [Revenue R12M Growth %]
+RETURN
+    SWITCH (
+        TRUE (),
+        Growth >= 0.05, "Growing",
+        Growth >= 0, "Stable",
+        Growth >= -0.05, "Softening",
+        "Declining"
+    )

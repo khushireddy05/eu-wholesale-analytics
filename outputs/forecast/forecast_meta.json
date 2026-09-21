@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-09-01T16:38:14+00:00",
+  "champion_model": "gradient_boosting",
+  "selection_metric": "wape",
+  "candidate_models": [
+    "seasonal_naive",
+    "ridge",
+    "elastic_net",
+    "gradient_boosting"
+  ],
+  "backtest_origins": [
+    "2025-06",
+    "2025-03",
+    "2024-12",
+    "2024-09"
+  ],
+  "history_start": "2019-01",
+  "history_end": "2026-06",
+  "horizon_months": 12,
+  "forecast_grain": [
+    "country_code",
+    "product_id"
+  ],
+  "target": "revenue_eur",
+  "champion_wape": 11.341377354104038,
+  "benchmark_wape": 14.341530604203603,
+  "improvement_vs_benchmark_pct": 20.919337920739082
+}

@@ -1,0 +1,8 @@
+product_id,product_name,product_family,unit,lifecycle_stage,base_unit_price_eur,volume_cagr,price_cagr,base_margin,margin_drift_pa,seasonality,covid_sensitivity
+P01,International Voice Termination,Voice,minutes,Decline,0.0185,-0.09,-0.062,0.121,-0.004,voice,0.15
+P02,A2P Messaging,Messaging,sms,Mature,0.041,0.076,0.043,0.184,0.006,messaging,0.05
+P03,IPX Roaming & Signalling,Mobile Data & Roaming,gb,Growth,1.85,0.235,-0.118,0.268,-0.003,roaming,0.95
+P04,IP Transit,Internet & Capacity,mbps,Growth,0.42,0.281,-0.215,0.312,-0.008,capacity,0.0
+P05,Ethernet & Capacity Services,Internet & Capacity,mbps,Mature,1.1,0.062,-0.078,0.348,-0.005,capacity,0.1
+P06,Cloud Connect,Internet & Capacity,mbps,Growth,2.4,0.238,-0.096,0.402,0.004,capacity,0.0
+P07,Voice Firewall & Anti-Fraud,Security,protected_subs_k,Growth,0.09,0.183,-0.028,0.512,0.007,flat,0.0

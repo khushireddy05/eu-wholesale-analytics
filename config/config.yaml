@@ -1,0 +1,89 @@
+# ---------------------------------------------------------------------------
+# EU Wholesale Market Analytics - run configuration
+# Every stage of the pipeline reads its settings from this file so that the
+# analysis is reproducible and parameter changes are traceable.
+# ---------------------------------------------------------------------------
+
+project:
+  name: "EU Wholesale Market Analytics & AI Forecasting"
+  reporting_currency: "EUR"
+  # Seed drives the whole synthetic data generation - same seed, same dataset.
+  random_seed: 20260901
+
+calendar:
+  history_start: "2019-01"    # first month of actuals
+  history_end:   "2026-06"    # last closed month of actuals
+  forecast_horizon_months: 12 # months forecast beyond history_end
+
+paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  outputs: "outputs"
+  excel: "outputs/excel"
+  powerbi: "outputs/powerbi"
+  forecast: "outputs/forecast"
+  insights: "outputs/insights"
+
+generation:
+  n_customers: 120
+  # Share of customers that churn at some point in the observed window.
+  churn_share: 0.10
+  # Share of customers that are won during the window (ramp-up from zero).
+  new_business_share: 0.18
+  noise_sigma: 0.045          # lognormal noise on monthly volumes
+  # Absolute scale anchor: total revenue in the first calendar year of the
+  # window. Relative product/market mix is emergent; only the scale is pinned.
+  target_base_year_revenue_eur: 1_450_000_000
+
+forecasting:
+  target: "revenue_eur"
+  # Grain the statistical models are trained on. Higher levels are produced by
+  # bottom-up aggregation so that every view reconciles to the same total.
+  grain: ["country_code", "product_id"]
+  # Rolling-origin backtest: number of evaluation folds and the step between
+  # forecast origins (months).
+  backtest_folds: 4
+  backtest_step: 3
+  min_train_months: 36
+  lags: [1, 2, 3, 6, 12]
+  rolling_windows: [3, 6, 12]
+  models: ["seasonal_naive", "ridge", "elastic_net", "gradient_boosting"]
+  # Metric used to pick the champion model (lower is better).
+  selection_metric: "wape"
+
+scenarios:
+  # Multiplicative driver adjustments applied to the champion forecast.
+  # price_effect  : cumulative annualised change in realised unit price
+  # volume_effect : cumulative annualised change in traffic volume
+  # Effects ramp linearly across the forecast horizon (no instant step change).
+  baseline:
+    label: "Baseline"
+    description: "Champion model forecast, current commercial trajectory."
+    price_effect_pa: 0.00
+    volume_effect_pa: 0.00
+  upside:
+    label: "Upside"
+    description: "Faster A2P/IPX growth, price erosion slows, two large wins land."
+    price_effect_pa: 0.030
+    volume_effect_pa: 0.060
+    # Per-product weighting of the driver effects (default 1.0). Growth
+    # products respond more strongly; declining voice barely responds at all.
+    product_multipliers: {P02: 1.4, P03: 1.4, P06: 1.3, P01: 0.4}
+  downside:
+    label: "Downside"
+    description: "Accelerated voice decline, aggressive transit price war, churn."
+    price_effect_pa: -0.055
+    volume_effect_pa: -0.045
+    product_multipliers: {P01: 1.6, P04: 1.5, P05: 1.2, P07: 0.6}
+
+ai:
+  enabled: true
+  model: "claude-opus-5"
+  # Adaptive thinking is on by default on current models; effort keeps the
+  # reasoning depth proportionate to a bounded writing task. Sampling
+  # parameters (temperature, top_p) are not accepted on these models.
+  effort: "medium"
+  max_tokens: 8000
+  # When no API key is present the deterministic rule-based writer is used so
+  # the pipeline always produces an insights document.
+  fallback_when_no_key: true

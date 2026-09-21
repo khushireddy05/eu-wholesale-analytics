@@ -1,0 +1,4 @@
+scenario,scenario_key,scenario_description,sort_order
+Downside,downside,"Accelerated voice decline, aggressive transit price war, churn.",1
+Baseline,baseline,"Champion model forecast, current commercial trajectory.",2
+Upside,upside,"Faster A2P/IPX growth, price erosion slows, two large wins land.",3

@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generated 2026-09-01T19:30:25 -->
+<workbook locale='en_GB' source-build='2026.2.2' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <preferences><preference name='ui.encoding.shelf.height' value='24' /><preference name='ui.shelf.height' value='26' /></preferences>
+  <style-theme name='smooth' />
+  <datasources>
+    <datasource caption='EU Wholesale Dashboard' inline='true' name='dashboard_data' version='18.1'>
+      <connection class='federated'><named-connections><named-connection caption='EU Wholesale Dashboard Extract' name='hyper_connection'><connection authentication='auth-none' class='hyper' dbname='Data/Extracts/eu_wholesale_dashboard.hyper' default-settings='yes' schema='Extract' sslmode='' username='tableau_internal_user' /></named-connection></named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='hyper_connection' name='Extract' table='[Extract].[Extract]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='hyper_connection' name='Extract' table='[Extract].[Extract]' type='table' />
+        <metadata-records><metadata-record class='column'><remote-name>view_type</remote-name><remote-type>129</remote-type><local-name>[view_type]</local-name><parent-name>[Extract]</parent-name><remote-alias>view_type</remote-alias><ordinal>0</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>date</remote-name><remote-type>7</remote-type><local-name>[date]</local-name><parent-name>[Extract]</parent-name><remote-alias>date</remote-alias><ordinal>1</ordinal><local-type>date</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>country_code</remote-name><remote-type>129</remote-type><local-name>[country_code]</local-name><parent-name>[Extract]</parent-name><remote-alias>country_code</remote-alias><ordinal>2</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>country_name</remote-name><remote-type>129</remote-type><local-name>[country_name]</local-name><parent-name>[Extract]</parent-name><remote-alias>country_name</remote-alias><ordinal>3</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>product_id</remote-name><remote-type>129</remote-type><local-name>[product_id]</local-name><parent-name>[Extract]</parent-name><remote-alias>product_id</remote-alias><ordinal>4</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>product_name</remote-name><remote-type>129</remote-type><local-name>[product_name]</local-name><parent-name>[Extract]</parent-name><remote-alias>product_name</remote-alias><ordinal>5</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>series</remote-name><remote-type>129</remote-type><local-name>[series]</local-name><parent-name>[Extract]</parent-name><remote-alias>series</remote-alias><ordinal>6</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>scenario</remote-name><remote-type>129</remote-type><local-name>[scenario]</local-name><parent-name>[Extract]</parent-name><remote-alias>scenario</remote-alias><ordinal>7</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>model</remote-name><remote-type>129</remote-type><local-name>[model]</local-name><parent-name>[Extract]</parent-name><remote-alias>model</remote-alias><ordinal>8</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>horizon</remote-name><remote-type>20</remote-type><local-name>[horizon]</local-name><parent-name>[Extract]</parent-name><remote-alias>horizon</remote-alias><ordinal>9</ordinal><local-type>integer</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>category</remote-name><remote-type>129</remote-type><local-name>[category]</local-name><parent-name>[Extract]</parent-name><remote-alias>category</remote-alias><ordinal>10</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>value</remote-name><remote-type>5</remote-type><local-name>[value]</local-name><parent-name>[Extract]</parent-name><remote-alias>value</remote-alias><ordinal>11</ordinal><local-type>real</local-type><aggregation>Sum</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>actual</remote-name><remote-type>5</remote-type><local-name>[actual]</local-name><parent-name>[Extract]</parent-name><remote-alias>actual</remote-alias><ordinal>12</ordinal><local-type>real</local-type><aggregation>Sum</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>abs_error</remote-name><remote-type>5</remote-type><local-name>[abs_error]</local-name><parent-name>[Extract]</parent-name><remote-alias>abs_error</remote-alias><ordinal>13</ordinal><local-type>real</local-type><aggregation>Sum</aggregation><contains-null>true</contains-null></metadata-record>
+<metadata-record class='column'><remote-name>metric_order</remote-name><remote-type>20</remote-type><local-name>[metric_order]</local-name><parent-name>[Extract]</parent-name><remote-alias>metric_order</remote-alias><ordinal>14</ordinal><local-type>integer</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record></metadata-records>
+      </connection>
+      <column caption='Revenue / Value' datatype='real' datatype-customized='true' default-format='c$#,##0,,\M;-c$#,##0,,\M' name='[value]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects><object caption='EU Wholesale Dashboard' id='EU Wholesale Dashboard'><properties context=''><relation connection='hyper_connection' name='Extract' table='[Extract].[Extract]' type='table' /></properties></object></objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='KPI Summary'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#183B56' fontsize='14'>Executive snapshot</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources>
+          <datasource-dependencies datasource='dashboard_data'><column datatype='string' name='[view_type]' role='dimension' type='nominal' caption='View Type' />
+<column datatype='string' name='[category]' role='dimension' type='nominal' caption='Category' />
+<column datatype='real' name='[value]' role='measure' type='quantitative' aggregation='Sum' caption='Value' />
+<column datatype='integer' name='[metric_order]' role='dimension' type='ordinal' caption='Metric Order' /></datasource-dependencies>
+          <filter class='categorical' column='[dashboard_data].[view_type]'><groupfilter function='member' level='[view_type]' member='&quot;KPI&quot;' /></filter>
+          <slices><column>[dashboard_data].[view_type]</column></slices><aggregation value='true' />
+        </view>
+        <style><style-rule element='worksheet'><format attr='color' value='#FFFFFF' /></style-rule><style-rule element='axis'><format attr='color' value='#486581' /></style-rule></style>
+        <panes><pane><view><breakdown value='auto' /></view><mark class='Text' /><encodings><text column='[dashboard_data].[value]' /></encodings></pane></panes>
+        <rows>[dashboard_data].[category]</rows><cols>[dashboard_data].[value]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Revenue Trend'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#183B56' fontsize='14'>Actual and forecast revenue</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources>
+          <datasource-dependencies datasource='dashboard_data'><column datatype='string' name='[view_type]' role='dimension' type='nominal' caption='View Type' />
+<column datatype='date' name='[date]' role='dimension' type='quantitative' caption='Month' />
+<column datatype='string' name='[series]' role='dimension' type='nominal' caption='Series' />
+<column datatype='real' name='[value]' role='measure' type='quantitative' aggregation='Sum' caption='Value' />
+<column datatype='string' name='[country_name]' role='dimension' type='nominal' caption='Country' />
+<column datatype='string' name='[product_name]' role='dimension' type='nominal' caption='Product' /></datasource-dependencies>
+          <filter class='categorical' column='[dashboard_data].[view_type]'><groupfilter function='member' level='[view_type]' member='&quot;Trend&quot;' /></filter>
+          <slices><column>[dashboard_data].[view_type]</column></slices><aggregation value='true' />
+        </view>
+        <style><style-rule element='worksheet'><format attr='color' value='#FFFFFF' /></style-rule><style-rule element='axis'><format attr='color' value='#486581' /></style-rule></style>
+        <panes><pane><view><breakdown value='auto' /></view><mark class='Line' /><encodings><color column='[dashboard_data].[series]' /><lod column='[dashboard_data].[series]' /></encodings></pane></panes>
+        <rows>[dashboard_data].[value]</rows><cols>[dashboard_data].[date]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Country Mix'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#183B56' fontsize='14'>Revenue by market — rolling 12 months</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources>
+          <datasource-dependencies datasource='dashboard_data'><column datatype='string' name='[view_type]' role='dimension' type='nominal' caption='View Type' />
+<column datatype='string' name='[category]' role='dimension' type='nominal' caption='Category' />
+<column datatype='real' name='[value]' role='measure' type='quantitative' aggregation='Sum' caption='Value' />
+<column datatype='string' name='[country_name]' role='dimension' type='nominal' caption='Country' /></datasource-dependencies>
+          <filter class='categorical' column='[dashboard_data].[view_type]'><groupfilter function='member' level='[view_type]' member='&quot;Country Mix&quot;' /></filter>
+          <slices><column>[dashboard_data].[view_type]</column></slices><aggregation value='true' />
+        </view>
+        <style><style-rule element='worksheet'><format attr='color' value='#FFFFFF' /></style-rule><style-rule element='axis'><format attr='color' value='#486581' /></style-rule></style>
+        <panes><pane><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[dashboard_data].[value]' /><text column='[dashboard_data].[value]' /></encodings></pane></panes>
+        <rows>[dashboard_data].[category]</rows><cols>[dashboard_data].[value]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Product Mix'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#183B56' fontsize='14'>Revenue by product — rolling 12 months</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources>
+          <datasource-dependencies datasource='dashboard_data'><column datatype='string' name='[view_type]' role='dimension' type='nominal' caption='View Type' />
+<column datatype='string' name='[category]' role='dimension' type='nominal' caption='Category' />
+<column datatype='real' name='[value]' role='measure' type='quantitative' aggregation='Sum' caption='Value' />
+<column datatype='string' name='[product_name]' role='dimension' type='nominal' caption='Product' /></datasource-dependencies>
+          <filter class='categorical' column='[dashboard_data].[view_type]'><groupfilter function='member' level='[view_type]' member='&quot;Product Mix&quot;' /></filter>
+          <slices><column>[dashboard_data].[view_type]</column></slices><aggregation value='true' />
+        </view>
+        <style><style-rule element='worksheet'><format attr='color' value='#FFFFFF' /></style-rule><style-rule element='axis'><format attr='color' value='#486581' /></style-rule></style>
+        <panes><pane><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[dashboard_data].[value]' /><text column='[dashboard_data].[value]' /></encodings></pane></panes>
+        <rows>[dashboard_data].[category]</rows><cols>[dashboard_data].[value]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Scenario Comparison'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#183B56' fontsize='14'>Baseline, upside and downside</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources>
+          <datasource-dependencies datasource='dashboard_data'><column datatype='string' name='[view_type]' role='dimension' type='nominal' caption='View Type' />
+<column datatype='date' name='[date]' role='dimension' type='quantitative' caption='Month' />
+<column datatype='string' name='[scenario]' role='dimension' type='nominal' caption='Scenario' />
+<column datatype='real' name='[value]' role='measure' type='quantitative' aggregation='Sum' caption='Value' />
+<column datatype='string' name='[country_name]' role='dimension' type='nominal' caption='Country' />
+<column datatype='string' name='[product_name]' role='dimension' type='nominal' caption='Product' /></datasource-dependencies>
+          <filter class='categorical' column='[dashboard_data].[view_type]'><groupfilter function='member' level='[view_type]' member='&quot;Scenario&quot;' /></filter>
+          <slices><column>[dashboard_data].[view_type]</column></slices><aggregation value='true' />
+        </view>
+        <style><style-rule element='worksheet'><format attr='color' value='#FFFFFF' /></style-rule><style-rule element='axis'><format attr='color' value='#486581' /></style-rule></style>
+        <panes><pane><view><breakdown value='auto' /></view><mark class='Line' /><encodings><color column='[dashboard_data].[scenario]' /><lod column='[dashboard_data].[scenario]' /></encodings></pane></panes>
+        <rows>[dashboard_data].[value]</rows><cols>[dashboard_data].[date]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Forecast Accuracy'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#183B56' fontsize='14'>Backtest WAPE by model</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources>
+          <datasource-dependencies datasource='dashboard_data'><column datatype='string' name='[view_type]' role='dimension' type='nominal' caption='View Type' />
+<column datatype='string' name='[category]' role='dimension' type='nominal' caption='Category' />
+<column datatype='real' name='[value]' role='measure' type='quantitative' aggregation='Sum' caption='Value' />
+<column datatype='string' name='[model]' role='dimension' type='nominal' caption='Model' /></datasource-dependencies>
+          <filter class='categorical' column='[dashboard_data].[view_type]'><groupfilter function='member' level='[view_type]' member='&quot;Accuracy&quot;' /></filter>
+          <slices><column>[dashboard_data].[view_type]</column></slices><aggregation value='true' />
+        </view>
+        <style><style-rule element='worksheet'><format attr='color' value='#FFFFFF' /></style-rule><style-rule element='axis'><format attr='color' value='#486581' /></style-rule></style>
+        <panes><pane><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[dashboard_data].[value]' /><text column='[dashboard_data].[value]' /></encodings></pane></panes>
+        <rows>[dashboard_data].[category]</rows><cols>[dashboard_data].[value]</cols>
+      </table>
+    </worksheet></worksheets>
+  <dashboards><dashboard name='EU Wholesale Overview'><layout-options><title><formatted-text><run bold='true' fontcolor='#102A43' fontsize='20'>EU Wholesale Market Analytics</run><run fontcolor='#627D98' fontsize='11'>   Actuals through June 2026 | 12-month forecast and scenarios</run></formatted-text></title></layout-options><size maxheight='900' maxwidth='1440' minheight='900' minwidth='1440' /><datasources><datasource caption='EU Wholesale Dashboard' name='dashboard_data' /></datasources><zones>
+        <zone h='100000' id='1' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='6500' id='2' type='title' w='100000' x='0' y='0' />
+          <zone h='11500' id='3' name='KPI Summary' show-title='true' w='100000' x='0' y='6500' />
+          <zone h='39000' id='4' name='Revenue Trend' show-title='true' w='60000' x='0' y='18000' />
+          <zone h='39000' id='5' name='Scenario Comparison' show-title='true' w='40000' x='60000' y='18000' />
+          <zone h='43000' id='6' name='Country Mix' show-title='true' w='33000' x='0' y='57000' />
+          <zone h='43000' id='7' name='Product Mix' show-title='true' w='34000' x='33000' y='57000' />
+          <zone h='43000' id='8' name='Forecast Accuracy' show-title='true' w='33000' x='67000' y='57000' />
+        </zone></zones></dashboard></dashboards>
+  <windows source-height='32'><window class='dashboard' maximized='true' name='EU Wholesale Overview'><viewpoints><viewpoint name='KPI Summary' /><viewpoint name='Revenue Trend' /><viewpoint name='Country Mix' /><viewpoint name='Product Mix' /><viewpoint name='Scenario Comparison' /><viewpoint name='Forecast Accuracy' /></viewpoints><active id='-1' /></window></windows>
+</workbook>
